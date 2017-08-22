@@ -72,6 +72,16 @@ public class Main {
 	        			}
 	        		}
 	        		break;
+	        case 7:
+	        		int dniaumento = Dentre.entero("ingrese dni del empelado/ejecutivo");
+	        		int aumento = Dentre.entero("ingrese aumento");
+	        		for(int i=0;i<10;i++){
+	        			if(lista[i].getDni() == dniaumento) {
+	        				lista[i].aumentosueldo(aumento);
+	        				break;
+	        			}
+	        		}
+	        		break;
 	        case 9:
 	        		System.out.println("caso 9");
 	        		int cont2=0;
