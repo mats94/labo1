@@ -50,7 +50,7 @@ public class Ejecutivo extends Empleado{
 			System.out.println("no es posible darle esa cantidad de dias");
 		}
 	}
-	private void disminuirhoras(float horas) {
+	public void disminuirhoras(float horas) {
 		setHorasT(horasT - horas);
 	}
 	

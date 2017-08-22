@@ -82,6 +82,16 @@ public class Main {
 	        			}
 	        		}
 	        		break;
+	        case 8:
+	        		int dniejec = Dentre.entero("ingrese dni del empelado/ejecutivo");
+	        		Float disminucionh = Dentre.flotante("ingrese horas a restar");
+	        		for(int i=0;i<10;i++){
+	        			if(lista[i].getDni() == dniejec) {
+	        				((Ejecutivo)lista[i]).disminuirhoras(disminucionh);
+	        				break;
+	        			}
+	        		}
+	        		break;
 	        case 9:
 	        		System.out.println("caso 9");
 	        		int cont2=0;
