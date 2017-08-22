@@ -110,6 +110,20 @@ public class Main {
 	        		}
 	        		System.out.println("termino");
 	        		break;
+	        case 10:
+	        		int dnivacas = Dentre.entero("ingrese dni del empelado/ejecutivo");
+	        		int diast = Dentre.entero("ingrese dias trabajados del empelado/ejecutivo");
+	        		for(int i=0;i<10;i++){
+	        			if(lista[i].getDni() == dnivacas && lista[i] instanceof Empleado) {
+	        				lista[i].vacaciones(diast);
+	        				break;
+	        			}
+	        			else if(lista[i].getDni() == dnivacas && lista[i] instanceof Ejecutivo) {
+	        				((Ejecutivo)lista[i]).vacacioneseje(diast);
+	        				break;
+	        			}
+	        		}
+	        		break;
 	        case 99: sigo=false;
 	        		System.out.println("Termino el programa");
 	            break;

@@ -5,7 +5,7 @@ import utils.Dentre;
 public class Empleado extends Persona{
 	private int legajo;
 	private float sueldo;
-	private int diasvacas;
+	private float diasvacas;
 	private int diasT;
 	public void modificarEmpleado() {
 		String nombre = Dentre.texto("\n Ingrese nombre del  empleado: ");
@@ -36,14 +36,10 @@ public class Empleado extends Persona{
 	public void aumentosueldo(int aumento) {
 		setSueldo(getSueldo() * aumento);
 	}
-	public void vacaciones(int dias) {
-		if((diasT / 6) >= (getDiasvacas() + dias)) {
-		setDiasvacas(getDiasvacas() + dias);
+	public void vacaciones(int diast) {
+		setDiasvacas(diasT / 6);
+		System.out.println("Dias de vacaciones: " + getDiasvacas());
 		}
-		else {
-			System.out.println("no es posible darle esa cantidad de dias");
-		}
-	}
 	
 	
 	public float getSueldo() {
@@ -52,7 +48,7 @@ public class Empleado extends Persona{
 	public void setSueldo(float sueldo) {
 		this.sueldo = sueldo;
 	}
-	public int getDiasvacas() {
+	public float getDiasvacas() {
 		return diasvacas;
 	}
 	public void setDiasvacas(int diasvacas) {

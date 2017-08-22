@@ -6,7 +6,7 @@ public class Ejecutivo extends Empleado{
 	private int edad;
 	private float horasT;
 	private int diasT;
-	private int diasvacas;
+	private float diasvacas;
 	
 	public void modificarEjecutivo() {
 		String nombre = Dentre.texto("\n Ingrese nombre del nuevo ejecutivo: ");
@@ -42,14 +42,11 @@ public class Ejecutivo extends Empleado{
 	public void listarEjecutivo(Ejecutivo e){
 		System.out.println(e.getNombre() + e.getSexo() + e.getDni() + e.getLegajo() + e.getSueldo());
 	}
-	public void vacaciones(int dias) {
-		if(((diasT / 6) * 1.5) >= (getDiasvacas() + dias)) {
-		setDiasvacas(getDiasvacas() + dias);
+	public void vacacioneseje(int dias) {
+		setDiasvacas((dias / 6) * 1.5f);
+		System.out.println(getDiasvacas());
 		}
-		else {
-			System.out.println("no es posible darle esa cantidad de dias");
-		}
-	}
+	
 	public void disminuirhoras(float horas) {
 		setHorasT(horasT - horas);
 	}
@@ -61,12 +58,12 @@ public class Ejecutivo extends Empleado{
 		this.horasT = horasT;
 	}
 
-	public int getDiasvacas() {
+	public float getDiasvacas() {
 		return diasvacas;
 	}
 
-	public void setDiasvacas(int diasvacas) {
-		this.diasvacas = diasvacas;
+	public void setDiasvacas(float f) {
+		this.diasvacas = f;
 	}
 	public int getEdad() {
 		return edad;
