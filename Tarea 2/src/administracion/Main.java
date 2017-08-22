@@ -38,9 +38,10 @@ public class Main {
 	            break;
 	        case 3:
 	        		int dniem = Dentre.entero("ingrese dni del empelado a modificar");
-	        		for(int i = 0;i<10;i++){
+	        		for(int i=0;i<10;i++){
 	        			if(lista[i].getDni() == dniem && lista[i] instanceof Empleado) {
 	        				lista[i].modificarEmpleado();
+	        				break;
 	        			}
 	        		}
 	        		break;
@@ -49,6 +50,7 @@ public class Main {
 	        		for(int i = 0;i<10;i++){
 	        			if(lista[i].getDni() == dniej && lista[i] instanceof Ejecutivo) {
         				((Ejecutivo)lista[i]).modificarEjecutivo();
+        				break;
 	        			}
 	        		}
 	        		break;
