@@ -38,10 +38,9 @@ public class Main {
 	            break;
 	        case 3:
 	        		int dni = Dentre.entero("ingrese dni del empelado a modificar");
-	        		int cont3 = 0;
 	        		for(int i = 0;i<10;i++){
-	        			if(lista[cont3].getDni() == dni) {
-	        				lista[cont3].modificarEmpleado();
+	        			if(lista[i].getDni() == dni) {
+	        				lista[i].modificarEmpleado();
 	        			}
 	        		}
 	        case 9:
