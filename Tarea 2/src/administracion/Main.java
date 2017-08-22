@@ -54,6 +54,24 @@ public class Main {
 	        			}
 	        		}
 	        		break;
+	        case 5:
+	        		int dnibajaem = Dentre.entero("ingrese dni del empelado a dar de baja");
+	        		for(int i=0;i<10;i++){
+	        			if(lista[i].getDni() == dnibajaem && lista[i] instanceof Empleado) {
+	        				lista[i]=null;
+	        				break;
+	        			}
+	        		}
+	        		break;
+	        case 6:
+	        		int dnibajaej = Dentre.entero("ingrese dni del empelado a modificar");
+	        		for(int i=0;i<10;i++){
+	        			if(lista[i].getDni() == dnibajaej && lista[i] instanceof Empleado) {
+	        				lista[i]=null;
+	        				break;
+	        			}
+	        		}
+	        		break;
 	        case 9:
 	        		System.out.println("caso 9");
 	        		int cont2=0;
