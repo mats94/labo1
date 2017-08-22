@@ -7,7 +7,16 @@ public class Empleado extends Persona{
 	private float sueldo;
 	private int diasvacas;
 	private int diasT;
-	
+	public void modificarEmpleado() {
+		String nombre = Dentre.texto("\n Ingrese nombre del  empleado: ");
+		String sexo = Dentre.texto("\n Ingrese sexo del  empleado: ");
+		int legajo = Dentre.entero("\n Ingrese legajo del  empleado: ");
+		float sueldo = Dentre.flotante("\n Ingrese sueldo del  empleado: ");
+		super.setNombre(nombre);
+		super.setSexo(sexo);
+		setLegajo(legajo);
+		setSueldo(sueldo);
+	}
 	public void listarEmpleados(Empleado e){
 		System.out.println(e.getNombre() + e.getSexo() + e.getDni() + e.getLegajo() + e.getSueldo());
 	}

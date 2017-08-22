@@ -36,6 +36,14 @@ public class Main {
 	        		((Ejecutivo) lista[cont]).altaejecutivo();
 	        		cont++;
 	            break;
+	        case 3:
+	        		int dni = Dentre.entero("ingrese dni del empelado a modificar");
+	        		int cont3 = 0;
+	        		for(int i = 0;i<10;i++){
+	        			if(lista[cont3].getDni() == dni) {
+	        				lista[cont3].modificarEmpleado();
+	        			}
+	        		}
 	        case 9:
 	        		System.out.println("caso 9");
 	        		int cont2=0;
