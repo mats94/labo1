@@ -8,6 +8,21 @@ public class Ejecutivo extends Empleado{
 	private int diasT;
 	private int diasvacas;
 	
+	public void modificarEjecutivo() {
+		String nombre = Dentre.texto("\n Ingrese nombre del nuevo ejecutivo: ");
+		String sexo = Dentre.texto("\n Ingrese sexo del nuevo ejecutivo: ");
+		int edad = Dentre.entero("\n Ingrese edad del nuevo ejecutivo: ");
+		int horasT = Dentre.entero("\n Ingrese horas de trabajo del nuevo ejecutivo: ");
+		int legajo = Dentre.entero("\n Ingrese legajo del nuevo ejecutivo: ");
+		float sueldo = Dentre.flotante("\n Ingrese sueldo del nuevo ejecutivo: ");
+		super.setNombre(nombre);
+		super.setSexo(sexo);
+		super.setLegajo(legajo);
+		super.setSueldo(sueldo);
+		setHorasT(horasT);
+		setEdad(edad);
+	}
+	
 	public void altaejecutivo() {
 		String nombre = Dentre.texto("\n Ingrese nombre del nuevo ejecutivo: ");
 		String sexo = Dentre.texto("\n Ingrese sexo del nuevo ejecutivo: ");

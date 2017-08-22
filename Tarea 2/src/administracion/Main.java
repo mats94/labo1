@@ -37,12 +37,21 @@ public class Main {
 	        		cont++;
 	            break;
 	        case 3:
-	        		int dni = Dentre.entero("ingrese dni del empelado a modificar");
+	        		int dniem = Dentre.entero("ingrese dni del empelado a modificar");
 	        		for(int i = 0;i<10;i++){
-	        			if(lista[i].getDni() == dni) {
+	        			if(lista[i].getDni() == dniem && lista[i] instanceof Empleado) {
 	        				lista[i].modificarEmpleado();
 	        			}
 	        		}
+	        		break;
+	        case 4:
+	        		int dniej = Dentre.entero("ingrese dni del ejecutivo a modificar");
+	        		for(int i = 0;i<10;i++){
+	        			if(lista[i].getDni() == dniej && lista[i] instanceof Ejecutivo) {
+        				((Ejecutivo)lista[i]).modificarEjecutivo();
+	        			}
+	        		}
+	        		break;
 	        case 9:
 	        		System.out.println("caso 9");
 	        		int cont2=0;
