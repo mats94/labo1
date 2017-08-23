@@ -1,9 +1,9 @@
 package auto;
 import auto.*;
 public class Auto {
-	Motor motor = new Motor();
-	Rueda rueda = new Rueda();
-	Caja_de_Velocidades caja = new Caja_de_Velocidades();
+	Motor motor;
+	Rueda rueda;
+	Caja_de_Velocidades caja;
 	private String aa;
 	private int puertas;
 	
