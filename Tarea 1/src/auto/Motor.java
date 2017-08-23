@@ -5,6 +5,12 @@ public class Motor {
 	private int hp;
 	private Float cilindrada;
 	
+	public String toString() {
+		return " Motor \n" +
+				" marca del motor: " + getMarca() +
+				"\n HP: " + getHp() +
+				"\n Cilindrada : " + getCilindrada();
+	}
 	// G and S
 	public String getMarca() {
 		return marca;

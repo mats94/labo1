@@ -5,8 +5,13 @@ public class Rueda {
 	private String color;
 	private String material;
 	private String aleacion;
-	private void Rueda(Float radio,String color,String material,String aleacion) {
-		
+	
+	public String toString() {
+		return "\n \n Rueda" + 
+				"\n Aleacion: " + getAleacion() + 
+				"\n Color: " + getColor() + 
+				"\n Material: " + getMaterial() +
+				"\n Radio: " + getRadio();
 	}
 	//G and S
 	public Float getRadio() {

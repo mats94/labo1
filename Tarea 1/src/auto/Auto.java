@@ -1,12 +1,17 @@
 package auto;
 import auto.*;
 public class Auto {
-	Motor motor;
-	Rueda rueda;
-	Caja_de_Velocidades caja;
+	private Motor motor;
+	private Rueda rueda;
+	private CajadeVelocidades caja;
 	private String aa;
 	private int puertas;
 	
+	public String toString() {
+		return "\n \n Equipacion del Auto" +
+				"\n Aire Acondicionado: " + getAa() +
+				"\n Cantidad de puertas: " + getPuertas();
+	}
 	// G and S
 	public Motor getMotor() {
 		return motor;
@@ -20,10 +25,10 @@ public class Auto {
 	public void setRueda(Rueda rueda) {
 		this.rueda = rueda;
 	}
-	public Caja_de_Velocidades getCaja() {
+	public CajadeVelocidades getCaja() {
 		return caja;
 	}
-	public void setCaja(Caja_de_Velocidades caja) {
+	public void setCaja(CajadeVelocidades caja) {
 		this.caja = caja;
 	}
 	public String getAa() {
@@ -52,8 +57,8 @@ public class Auto {
 		
 	}
 	public void setCaja(int cant_marchas, String tipo_relacion) {
-		caja.setCant_marchas(cant_marchas);
-		caja.setTipo_relacion(tipo_relacion);
+		caja.setCantmarchas(cant_marchas);
+		caja.setTiporelacion(tipo_relacion);
 		
 	}
 }

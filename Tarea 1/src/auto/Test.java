@@ -4,7 +4,7 @@ public class Test {
 
 	public static void main(String[] args) {
 		// car
-		Caja_de_Velocidades caja = new Caja_de_Velocidades();
+		CajadeVelocidades caja = new CajadeVelocidades();
 		Motor motor = new Motor();
 		Rueda rueda = new Rueda();
 		Auto car = new Auto();
@@ -19,8 +19,8 @@ public class Test {
 		rueda.setMaterial("acero");
 		rueda.setAleacion("aluminio");
 			//Caja
-		caja.setCant_marchas(5);
-		caja.setTipo_relacion("manual");
+		caja.setCantmarchas(5);
+		caja.setTiporelacion("manual");
 			//Auto
 		car.setAa("si");
 		car.setPuertas(4);
@@ -28,24 +28,13 @@ public class Test {
 		//imprimo los datos
 		System.out.println(
 				"Auto 1 \n" +
-				" Motor \n" +
-				" marca del motor: " + motor.getMarca() +
-				"\n HP: " + motor.getHp() +
-				"\n Cilindrada : " + motor.getCilindrada() + 
-				"\n \n Rueda" + 
-				"\n Aleacion: " + rueda.getAleacion() + 
-				"\n Color: " + rueda.getColor() + 
-				"\n Material: " + rueda.getMaterial() +
-				"\n Radio: " + rueda.getRadio() +
-				"\n \n Caja" +
-				"\n Relacion de marchas: " + caja.getTipo_relacion() + 
-				"\n Cantidad de marchas: " + caja.getCant_marchas() +
-				"\n \n Equipacion del Auto" +
-				"\n Aire Acondicionado: " + car.getAa() +
-				"\n Cantidad de puertas: " + car.getPuertas()
+				motor.toString() + 
+				rueda.toString() +
+				caja.toString() +
+				car.toString()
 				);
-	/*	// car2
-		Caja_de_Velocidades caja2 = new Caja_de_Velocidades();
+		// car2
+		CajadeVelocidades caja2 = new CajadeVelocidades();
 		Motor motor2 = new Motor();
 		Rueda rueda2 = new Rueda();
 		Auto car2 = new Auto();
@@ -60,8 +49,8 @@ public class Test {
 		rueda2.setMaterial("acero");
 		rueda2.setRadio(1.4F);
 		//Caja
-		caja2.setCant_marchas(5);
-		caja2.setTipo_relacion("automatico");
+		caja2.setCantmarchas(5);
+		caja2.setTiporelacion("automatico");
 		//Auto
 		car2.setAa("si");
 		car2.setPuertas(5);
@@ -69,22 +58,12 @@ public class Test {
 		//imprimo los datos
 		System.out.println(
 				"\n Auto 2 \n" +
-				" Motor \n" +
-				" marca del motor: " + motor2.getMarca() +
-				"\n HP: " + motor2.getHp() +
-				"\n Cilindrada : " + motor2.getCilindrada() + 
-				"\n \n Rueda" + 
-				"\n Aleacion: " + rueda2.getAleacion() + 
-				"\n Color: " + rueda2.getColor() + 
-				"\n Material: " + rueda2.getMaterial() +
-				"\n Radio: " + rueda2.getRadio() +
-				"\n \n Caja" +
-				"\n Relacion de marchas: " + caja2.getTipo_relacion() + 
-				"\n Cantidad de marchas: " + caja2.getCant_marchas() +
-				"\n \n Equipacion del Auto" +
-				"\n Aire Acondicionado: " + car2.getAa() +
-				"\n Cantidad de puertas: " + car2.getPuertas()
-				); */
-	} }
+				motor2.toString() +
+				rueda2.toString() +
+				caja2.toString() +
+				car2.toString()
+				); 
+	} 
+}
 
 
