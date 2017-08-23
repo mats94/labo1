@@ -1,5 +1,5 @@
 package administracion;
-
+import auto.*;
 import utils.Dentre;
 
 public class Empleado{
@@ -10,6 +10,7 @@ public class Empleado{
 	private String nombre;
 	private String sexo;
 	private int dni;
+	private Auto car;
 	public void modificarEmpleado() {
 		String nombre = Dentre.texto("\n Ingrese nombre del  empleado: ");
 		String sexo = Dentre.texto("\n Ingrese sexo del  empleado: ");
