@@ -39,8 +39,8 @@ public class Ejecutivo extends Empleado{
 		setHorasT(horasT);
 		setEdad(edad);
 	}
-	public void listarEjecutivo(Ejecutivo e){
-		System.out.println(e.getNombre() + e.getSexo() + e.getDni() + e.getLegajo() + e.getSueldo());
+	public String toString(){
+		return getNombre() + getSexo() + getDni() + getLegajo() + getSueldo();
 	}
 	public void vacacioneseje(int dias) {
 		setDiasvacas((dias / 6) * 1.5f);

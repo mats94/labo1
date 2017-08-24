@@ -102,7 +102,7 @@ public class Main {
 	        			cont2++;
 	        		}
 	        		else if(lista[cont2] instanceof Ejecutivo) {
-	        			((Ejecutivo) lista[cont2]).listarEjecutivo((Ejecutivo)lista[cont2]);	
+	        			System.out.println(((Ejecutivo) lista[cont2]).toString());	
 	        			System.out.println("ejecutivo listado");
 	        			cont2++;
 					}
