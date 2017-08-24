@@ -96,17 +96,19 @@ public class Main {
 	        		System.out.println("caso 9");
 	        		int cont2=0;
 	        		while(cont2 < 10) {
-	        		if(lista[cont2] instanceof Empleado) {
-	        			lista[cont2].listarEmpleados(lista[cont2]);	
-	        			System.out.println("empleado listado");
-	        			cont2++;
-	        		}
-	        		else if(lista[cont2] instanceof Ejecutivo) {
+	        		if(lista[cont2] instanceof Ejecutivo) {
 	        			System.out.println(((Ejecutivo) lista[cont2]).toString());	
 	        			System.out.println("ejecutivo listado");
 	        			cont2++;
 					}
+	        		else if(lista[cont2] instanceof Empleado) {
+	        			lista[cont2].listarEmpleados(lista[cont2]);	
+	        			System.out.println("empleado listado");
+	        			cont2++;
+	        		} 
+	        		else {
 	        		cont2++;
+	        		}
 	        		}
 	        		System.out.println("termino");
 	        		break;
