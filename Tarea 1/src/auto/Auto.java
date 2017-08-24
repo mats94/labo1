@@ -8,16 +8,13 @@ public class Auto {
 	private int puertas;
 	
 	public String toString() {
-		return "\n \n Equipacion del Auto" +
+		return motor.toString() + rueda.toString() + caja.toString() + "\n \n Equipacion del Auto" +
 				"\n Aire Acondicionado: " + getAa() +
 				"\n Cantidad de puertas: " + getPuertas();
 	}
 	// G and S
 	public Motor getMotor() {
 		return motor;
-	}
-	public void setMotor(Motor motor) {
-		this.motor = motor;
 	}
 	public Rueda getRueda() {
 		return rueda;
@@ -50,15 +47,18 @@ public class Auto {
 		rueda.setAleacion(aleacion);
 		
 	}
-	public void setMotor(String marca, int hp, float cilindrada) {
+	/*public void setMotor(String marca, int hp, float cilindrada) {
 		motor.setMarca(marca);
 		motor.setHp(hp);
 		motor.setCilindrada(cilindrada);
 		
-	}
+	} */
 	public void setCaja(int cant_marchas, String tipo_relacion) {
 		caja.setCantmarchas(cant_marchas);
 		caja.setTiporelacion(tipo_relacion);
 		
+	}
+	public void setMotor(Motor motor) {
+		this.motor = motor;
 	}
 }
