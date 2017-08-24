@@ -17,8 +17,8 @@ public class Empleado extends Persona{
 		setLegajo(legajo);
 		setSueldo(sueldo);
 	}
-	public void listarEmpleados(Empleado e){
-		System.out.println(e.getNombre() + e.getSexo() + e.getDni() + e.getLegajo() + e.getSueldo());
+	public String toString(){
+		return getNombre() + getSexo() + getDni() + getLegajo() + getSueldo();
 	}
 	public void altaemp() {
 		String nombre = Dentre.texto("\n Ingrese nombre del nuevo empleado: ");

@@ -1,6 +1,4 @@
 package administracion;
-import java.util.ArrayList;
-
 import administracion.*;
 import utils.Dentre;
 public class Main {
@@ -48,16 +46,16 @@ public class Main {
 	        case 4:
 	        		int dniej = Dentre.entero("ingrese dni del ejecutivo a modificar");
 	        		for(int i = 0;i<10;i++){
-	        			if(lista[i].getDni() == dniej && lista[i] instanceof Ejecutivo) {
+	        			if(lista[i].getDni() == dniej ) {
         				((Ejecutivo)lista[i]).modificarEjecutivo();
         				break;
 	        			}
 	        		}
 	        		break;
 	        case 5:
-	        		int dnibajaem = Dentre.entero("ingrese dni del empelado a dar de baja");
+	        		int dnibajaem = Dentre.entero("ingrese dni del empleado a dar de baja");
 	        		for(int i=0;i<10;i++){
-	        			if(lista[i].getDni() == dnibajaem && lista[i] instanceof Empleado) {
+	        			if(lista[i].getDni() == dnibajaem ) {
 	        				lista[i]=null;
 	        				break;
 	        			}
@@ -66,7 +64,7 @@ public class Main {
 	        case 6:
 	        		int dnibajaej = Dentre.entero("ingrese dni del empelado a modificar");
 	        		for(int i=0;i<10;i++){
-	        			if(lista[i].getDni() == dnibajaej && lista[i] instanceof Empleado) {
+	        			if(lista[i].getDni() == dnibajaej ) {
 	        				lista[i]=null;
 	        				break;
 	        			}
@@ -95,14 +93,14 @@ public class Main {
 	        case 9:
 	        		System.out.println("caso 9");
 	        		int cont2=0;
-	        		while(cont2 < 10) {
+	        		while(cont2 < lista.length) {
 	        		if(lista[cont2] instanceof Ejecutivo) {
 	        			System.out.println(((Ejecutivo) lista[cont2]).toString());	
 	        			System.out.println("ejecutivo listado");
 	        			cont2++;
 					}
 	        		else if(lista[cont2] instanceof Empleado) {
-	        			lista[cont2].listarEmpleados(lista[cont2]);	
+	        			System.out.println(lista[cont2].toString());	
 	        			System.out.println("empleado listado");
 	        			cont2++;
 	        		} 
@@ -115,7 +113,7 @@ public class Main {
 	        case 10:
 	        		int dnivacas = Dentre.entero("ingrese dni del empelado/ejecutivo");
 	        		int diast = Dentre.entero("ingrese dias trabajados del empelado/ejecutivo");
-	        		for(int i=0;i<10;i++){
+	        		for(int i=0;i<lista.length;i++){
 	        			if(lista[i].getDni() == dnivacas && lista[i] instanceof Empleado) {
 	        				lista[i].vacaciones(diast);
 	        				break;
