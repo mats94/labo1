@@ -36,7 +36,7 @@ public class Main {
 	            break;
 	        case 3:
 	        		int dniem = Dentre.entero("ingrese dni del empelado a modificar");
-	        		for(int i=0;i<10;i++){
+	        		for(int i=0;i<lista.length;i++){
 	        			if(lista[i].getDni() == dniem && lista[i] instanceof Empleado) {
 	        				lista[i].modificarEmpleado();
 	        				break;
@@ -45,7 +45,7 @@ public class Main {
 	        		break;
 	        case 4:
 	        		int dniej = Dentre.entero("ingrese dni del ejecutivo a modificar");
-	        		for(int i = 0;i<10;i++){
+	        		for(int i = 0;i<lista.length;i++){
 	        			if(lista[i].getDni() == dniej ) {
         				((Ejecutivo)lista[i]).modificarEjecutivo();
         				break;
@@ -54,7 +54,7 @@ public class Main {
 	        		break;
 	        case 5:
 	        		int dnibajaem = Dentre.entero("ingrese dni del empleado a dar de baja");
-	        		for(int i=0;i<10;i++){
+	        		for(int i=0;i<lista.length;i++){
 	        			if(lista[i].getDni() == dnibajaem ) {
 	        				lista[i]=null;
 	        				break;
@@ -63,7 +63,7 @@ public class Main {
 	        		break;
 	        case 6:
 	        		int dnibajaej = Dentre.entero("ingrese dni del empelado a modificar");
-	        		for(int i=0;i<10;i++){
+	        		for(int i=0;i<lista.length;i++){
 	        			if(lista[i].getDni() == dnibajaej ) {
 	        				lista[i]=null;
 	        				break;
@@ -73,7 +73,7 @@ public class Main {
 	        case 7:
 	        		int dniaumento = Dentre.entero("ingrese dni del empelado/ejecutivo");
 	        		int aumento = Dentre.entero("ingrese aumento");
-	        		for(int i=0;i<10;i++){
+	        		for(int i=0;i<lista.length;i++){
 	        			if(lista[i].getDni() == dniaumento) {
 	        				lista[i].aumentosueldo(aumento);
 	        				break;
@@ -81,9 +81,9 @@ public class Main {
 	        		}
 	        		break;
 	        case 8:
-	        		int dniejec = Dentre.entero("ingrese dni del empelado/ejecutivo");
+	        		int dniejec = Dentre.entero("ingrese dni del ejecutivo");
 	        		Float disminucionh = Dentre.flotante("ingrese horas a restar");
-	        		for(int i=0;i<10;i++){
+	        		for(int i=0;i<lista.length;i++){
 	        			if(lista[i].getDni() == dniejec) {
 	        				((Ejecutivo)lista[i]).disminuirhoras(disminucionh);
 	        				break;
@@ -114,12 +114,12 @@ public class Main {
 	        		int dnivacas = Dentre.entero("ingrese dni del empelado/ejecutivo");
 	        		int diast = Dentre.entero("ingrese dias trabajados del empelado/ejecutivo");
 	        		for(int i=0;i<lista.length;i++){
-	        			if(lista[i].getDni() == dnivacas && lista[i] instanceof Empleado) {
-	        				lista[i].vacaciones(diast);
+	        			if(lista[i].getDni() == dnivacas && lista[i] instanceof Ejecutivo) {
+	        				((Ejecutivo)lista[i]).vacacioneseje(diast);
 	        				break;
 	        			}
-	        			else if(lista[i].getDni() == dnivacas && lista[i] instanceof Ejecutivo) {
-	        				((Ejecutivo)lista[i]).vacacioneseje(diast);
+	        			if(lista[i].getDni() == dnivacas && lista[i] instanceof Empleado) {
+	        				lista[i].vacaciones(diast);
 	        				break;
 	        			}
 	        		}
