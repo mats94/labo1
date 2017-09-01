@@ -21,8 +21,8 @@ public class Empleado{
 		setLegajo(legajo);
 		setSueldo(sueldo);
 	}
-	public void listarEmpleados(Empleado e){
-		System.out.println(e.getNombre() + e.getSexo() + e.getDni() + e.getLegajo() + e.getSueldo());
+	public void listarEmpleados(){
+		System.out.println(getNombre() + getSexo() + getDni() + getLegajo() + getSueldo());
 	}
 	public void altaemp() {
 		String nombre = Dentre.texto("\n Ingrese nombre del nuevo empleado: ");
